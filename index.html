@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rohit SV — Motivated Computer Science student and Full-Stack Developer skilled in Java, Python, Spring Boot, and web development. View projects, skills, and experience." />
   <title>Rohit SV — Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
@@ -11,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- ───────────── SCROLL PROGRESS ───────────── -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- ───────────── NAVBAR ───────────── -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -34,12 +38,13 @@
 
   <!-- ───────────── HERO ───────────── -->
   <section class="hero" id="hero">
+    <canvas class="hero-particles" id="heroParticles"></canvas>
     <div class="container hero-grid">
       <div class="hero-text">
         <p class="hero-greeting">Hi, I'm</p>
         <h1 class="hero-name">Rohit SV<span class="accent">.</span></h1>
         <p class="hero-tagline">B.Tech CSBS Student · Full-Stack Developer · Problem Solver</p>
-        <p class="hero-sub">I build scalable applications &amp; dynamic UIs that solve real problems.</p>
+        <p class="hero-sub">Eager to contribute to real-world projects, solve technical problems, and continuously learn and grow in a challenging professional environment.</p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary">Get in Touch</a>
           <a href="resume.pdf" class="btn btn-outline" id="downloadResume" download target="_blank" rel="noopener">
@@ -49,7 +54,10 @@
         </div>
       </div>
       <div class="hero-visual">
-       
+        <div class="hero-blob"></div>
+        <div class="hero-avatar">
+          <span class="avatar-initials">RS</span>
+        </div>
       </div>
     </div>
   </section>
@@ -58,12 +66,12 @@
   <section class="section" id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <div class="notion-block about-block">
+      <div class="notion-block about-block" data-aos>
         <div class="about-content">
           <div class="about-icon">👋</div>
           <div>
-            <p>I'm <strong>Rohit SV</strong> — a curious developer who enjoys turning ideas into working products. I like building things that solve real problems. I spend a lot of time sharpening my problem-solving skills through coding challenges and exploring how backend systems connect with clean, user-friendly interfaces.</p>
-            <p>I'm especially interested in creating <strong>scalable applications</strong> and <strong>dynamic UIs</strong>.</p>
+            <p>I'm <strong>Rohit SV</strong> — a motivated and passionate Computer Science student who enjoys turning ideas into working products. I like building things that solve real problems, and I spend a lot of time sharpening my problem-solving skills through coding challenges and exploring how backend systems connect with clean, user-friendly interfaces.</p>
+            <p>I'm especially interested in creating <strong>scalable applications</strong> using <strong>Java, Python, Spring Boot</strong>, and modern web technologies.</p>
             <p>Outside of coding, I enjoy learning new technologies, improving my fitness, and constantly pushing myself to grow as both a developer and a person. I believe in <em>learning by building</em> — and every project teaches me something new.</p>
           </div>
         </div>
@@ -77,58 +85,36 @@
       <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
 
-        <div class="notion-block skill-card" data-aos>
+        <div class="notion-block skill-card" data-aos data-aos-delay="100">
           <div class="skill-icon">💻</div>
-          <h3>Programming</h3>
+          <h3>Programming Languages</h3>
           <div class="tag-list">
-            <span class="tag">C</span>
             <span class="tag">Java</span>
-            <span class="tag">Python</span>
             <span class="tag">SQL</span>
+            <span class="tag">Python</span>
           </div>
         </div>
 
-        <div class="notion-block skill-card" data-aos>
-          <div class="skill-icon">🌐</div>
-          <h3>Web Development</h3>
-          <div class="tag-list">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Spring Boot</span>
-          </div>
-        </div>
-
-        <div class="notion-block skill-card" data-aos>
+        <div class="notion-block skill-card" data-aos data-aos-delay="200">
           <div class="skill-icon">🧰</div>
-          <h3>Tools</h3>
+          <h3>Frameworks & Tools</h3>
           <div class="tag-list">
-            <span class="tag">VS Code</span>
-            <span class="tag">Git / GitHub</span>
-            <span class="tag">IntelliJ</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Postman</span>
+            <span class="tag">Git</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">MySQL</span>
           </div>
         </div>
 
-        <div class="notion-block skill-card" data-aos>
-          <div class="skill-icon">🤖</div>
-          <h3>AI/Machine Learning</h3>
-          <div class="tag-list">
-            <span class="tag">Pandas</span>
-            <span class="tag">NumPy</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">Prophet</span>
-            <span class="tag">TSFresh</span>
-          </div>
-        </div>
-
-        <div class="notion-block skill-card" data-aos>
+        <div class="notion-block skill-card" data-aos data-aos-delay="300">
           <div class="skill-icon">🗣️</div>
           <h3>Soft Skills</h3>
           <div class="tag-list">
+            <span class="tag">Problem Solving</span>
             <span class="tag">Leadership</span>
-            <span class="tag">Communication</span>
-            <span class="tag">Adaptability</span>
-            <span class="tag">Quick Learning</span>
+            <span class="tag">Project Management</span>
           </div>
         </div>
 
@@ -142,47 +128,42 @@
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
 
-        <div class="notion-block project-card" data-aos>
-          <div class="project-header">
-            <div class="project-icon">🛡️</div>
-            <div class="project-links">
-              <a href="https://github.com/svrohit123" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-              <a href="#" aria-label="Live demo" class="project-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">CautioNet <span class="project-status project-status-ongoing" aria-label="Project ongoing"><span class="status-dot"></span> Ongoing</span></h3>
-          <p class="project-desc">Phishing Detection Website — A clean, intuitive security-focused UI for detecting malicious websites in real time.</p>
-          <div class="tag-list">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-
-        <div class="notion-block project-card" data-aos>
+        <div class="notion-block project-card" data-aos data-aos-delay="100">
           <div class="project-header">
             <div class="project-icon">💓</div>
             <div class="project-links">
               <a href="https://github.com/svrohit123/fitpulse_anomaly_detection" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               </a>
-              <a href="#" aria-label="Live demo" class="project-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
             </div>
           </div>
           <h3 class="project-title">FitPulse <span class="project-status project-status-completed" aria-label="Project completed"><span class="status-icon" aria-hidden="true">✓</span> Completed</span></h3>
-          <p class="project-desc">Health Anomaly Detection System — Real-time health anomaly detection with forecasting &amp; clustering models using Prophet + TSFresh for time-series analysis.</p>
+          <p class="project-desc">Fitness Anomaly Detection System — Developed a fitness analytics system to monitor heart rate, sleep, and step count data and detect abnormal patterns. Implemented Z-score, IQR, K-Means, DBSCAN, Prophet, and TS-Fresh for anomaly detection, clustering, feature extraction, and forecasting. Built an interactive Streamlit dashboard for data analysis, visualization, and fitness insights.</p>
           <div class="tag-list">
             <span class="tag">Python</span>
             <span class="tag">Streamlit</span>
             <span class="tag">Machine Learning</span>
             <span class="tag">Prophet</span>
-            <span class="tag">TSFresh</span>
+            <span class="tag">TS-Fresh</span>
+          </div>
+        </div>
+
+        <div class="notion-block project-card" data-aos data-aos-delay="200">
+          <div class="project-header">
+            <div class="project-icon">🔗</div>
+            <div class="project-links">
+              <a href="https://github.com/svrohit123/cutify" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Cutify <span class="project-status project-status-completed" aria-label="Project completed"><span class="status-icon" aria-hidden="true">✓</span> Completed</span></h3>
+          <p class="project-desc">URL Shortener Web Application — Developed a secure URL shortening system for creating and managing short URLs with efficient redirection. Implemented Spring Boot, MySQL, and Caffeine Cache to optimize URL storage, retrieval, and redirection performance. Built REST APIs for URL creation, redirection, and management, with a focus on scalability and efficient data handling.</p>
+          <div class="tag-list">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Caffeine Cache</span>
+            <span class="tag">REST API</span>
           </div>
         </div>
 
@@ -206,8 +187,15 @@
           <div class="notion-block timeline-item timeline-item-internship" data-aos>
             <div class="timeline-dot"></div>
             <div class="timeline-badge timeline-badge-internship">Internship</div>
-            <h3>Infosys Springboard — Project Intern</h3>
-            <p>Built the <strong>FitPulse</strong> full-stack health anomaly detection application as part of the internship programme.</p>
+            <h3>Infosys Springboard — Python Project Intern</h3>
+            <div class="experience-meta">
+              <span class="experience-meta-tag">📅 Sept 2025 – Dec 2025</span>
+              <span class="experience-meta-tag">🌐 Virtual</span>
+            </div>
+            <ul>
+              <li>Acquired hands-on experience in Python development with key technologies and libraries such as Streamlit, Prophet, TS-Fresh and implemented machine learning algorithms.</li>
+              <li>Collaborated with a team of 4 developers, deepened understanding of data preprocessing, data validation, anomaly detection, time-series forecasting, and data visualization while optimizing data handling and analysis workflows.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -220,23 +208,17 @@
         </h3>
         <p class="subsection-desc">Courses and credentials earned.</p>
         <div class="timeline timeline-certifications">
-          <div class="notion-block timeline-item timeline-item-cert" data-aos>
+          <div class="notion-block timeline-item timeline-item-cert" data-aos data-aos-delay="100">
             <div class="timeline-dot timeline-dot-cert"></div>
             <div class="timeline-badge timeline-badge-cert">Certification</div>
-            <h3>Java Foundation Certification</h3>
+            <h3>Amazon Web Services — AI Practitioner</h3>
+            <p>AWS AI Practitioner certification covering cloud AI services and machine learning foundations.</p>
+          </div>
+          <div class="notion-block timeline-item timeline-item-cert" data-aos data-aos-delay="200">
+            <div class="timeline-dot timeline-dot-cert"></div>
+            <div class="timeline-badge timeline-badge-cert">Certification</div>
+            <h3>Infosys — Java Foundation Certificate</h3>
             <p>Core Java fundamentals, OOP concepts, and data structures.</p>
-          </div>
-          <div class="notion-block timeline-item timeline-item-cert" data-aos>
-            <div class="timeline-dot timeline-dot-cert"></div>
-            <div class="timeline-badge timeline-badge-cert">Certification</div>
-            <h3>Python Foundation Certification</h3>
-            <p>Python programming fundamentals and scripting.</p>
-          </div>
-          <div class="notion-block timeline-item timeline-item-cert" data-aos>
-            <div class="timeline-dot timeline-dot-cert"></div>
-            <div class="timeline-badge timeline-badge-cert">Certification</div>
-            <h3>CS50x Python — Harvard (edX)</h3>
-            <p>Introduction to programming with Python by Harvard University.</p>
           </div>
         </div>
       </div>
@@ -247,14 +229,27 @@
   <section class="section" id="education">
     <div class="container">
       <h2 class="section-title">Education</h2>
-      <div class="notion-block education-card" data-aos>
-        <div class="edu-icon">🎓</div>
-        <div class="edu-details">
-          <h3>B.Tech — Computer Science &amp; Business Systems</h3>
-          <p class="edu-institution">RMD Engineering College</p>
-          <div class="edu-meta">
-            <span class="edu-year">2023 – 2027</span>
-            <span class="edu-cgpa">CGPA: <strong>7.82</strong></span>
+      <div class="education-grid">
+        <div class="notion-block education-card" data-aos>
+          <div class="edu-icon">🎓</div>
+          <div class="edu-details">
+            <h3>B.Tech — Computer Science &amp; Business Systems</h3>
+            <p class="edu-institution">RMD Engineering College</p>
+            <div class="edu-meta">
+              <span class="edu-year">Sept 2023 – June 2027</span>
+              <span class="edu-cgpa">CGPA: <strong>7.83</strong> (till date)</span>
+            </div>
+          </div>
+        </div>
+        <div class="notion-block education-card" data-aos data-aos-delay="100">
+          <div class="edu-icon">🏫</div>
+          <div class="edu-details">
+            <h3>Higher Secondary Education — Computer Science</h3>
+            <p class="edu-institution">Godson Matriculation Higher Secondary School</p>
+            <div class="edu-meta">
+              <span class="edu-year">June 2021 – May 2023</span>
+              <span class="edu-cgpa">Percentage: <strong>88.50%</strong></span>
+            </div>
           </div>
         </div>
       </div>
@@ -267,7 +262,7 @@
       <h2 class="section-title">Get in Touch</h2>
       <div class="contact-grid">
         <div class="notion-block contact-info" data-aos>
-          <p>I'm currently looking for internship opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+          <p>I'm currently looking for software development opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
           <div class="social-links">
             <a href="https://github.com/svrohit123" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -281,16 +276,20 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Email
             </a>
+            <a href="tel:+918939277031" aria-label="Phone" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 89392 77031
+            </a>
           </div>
         </div>
-        <form class="notion-block contact-form" id="contactForm" data-aos>
+        <form class="notion-block contact-form" id="contactForm" data-aos data-aos-delay="100">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required />
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="svrohit18@gmail.com" required />
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
@@ -305,9 +304,25 @@
   <!-- ───────────── FOOTER ───────────── -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-links">
+        <a href="https://github.com/svrohit123" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/rohitsv8606" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:svrohit18@gmail.com" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
       <p>&copy; 2026 Rohit SV. Built with passion &amp; purpose.</p>
     </div>
   </footer>
+
+  <!-- ───────────── BACK TO TOP ───────────── -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
